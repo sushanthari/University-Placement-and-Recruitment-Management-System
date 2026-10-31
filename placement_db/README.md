@@ -63,15 +63,7 @@ SET ECHO ON
 - The errors at the very end (section 5) are **on purpose**.
 - To run again from scratch: `@00_cleanup.sql`, then `@run_all.sql`.
 
-**Common mistakes**
-| You see | Meaning | Fix |
-|---|---|---|
-| `SP2-0310: unable to open file` | SQL*Plus wasn't started in this folder | `EXIT`, `cd` into the folder that holds `run_all.sql`, start `sqlplus` again |
-| `'xyz' is not recognized as an internal or external command` | You typed a SQL command at the Windows prompt (`C:\...>`) | Start `sqlplus` first; SQL only works at `SQL>` |
-| `name is already used by an existing object` | Tables are left over from an earlier run | `@00_cleanup.sql` |
-| Windows says `ls` is not recognized | Windows uses `dir`, not `ls` | `dir` |
 
----
 
 ## 4. The 13 tables
 
